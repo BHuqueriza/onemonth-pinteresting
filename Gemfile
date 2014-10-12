@@ -31,6 +31,9 @@ gem 'devise'
 # Added 101114 - Paperclip gem
 gem 'paperclip', '~> 3.0'
 
+# Added 101114 - AWS gem
+gem 'aws-sdk', '~> 1.20.0'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'

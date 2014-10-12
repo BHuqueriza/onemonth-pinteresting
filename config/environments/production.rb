@@ -80,5 +80,15 @@ Pinteresting::Application.configure do
 
   # Added 081314 - Required for Heroku
   # *Set this to actual host!*
-  config.action_mailer.default_url_options = { :host => 'http://bsh-pinteresting.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'http://bh-imghouse.herokuapp.com/' }
+
+  # Added 101114 - Required for AWS
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end
