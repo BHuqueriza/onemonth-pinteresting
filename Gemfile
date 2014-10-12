@@ -28,6 +28,9 @@ gem 'bootstrap-sass'
 # Added 081314 - Devise gem
 gem 'devise'
 
+# Added 101114 - Paperclip gem
+gem 'paperclip', '~> 3.0'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
