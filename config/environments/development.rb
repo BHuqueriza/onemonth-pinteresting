@@ -29,4 +29,8 @@ Pinteresting::Application.configure do
 
   # Added 081314 - Required for Heroku
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Added 101214 - Required for reCAPTCHA
+  RECAPTCHA_PUBLIC_KEY= '6Ldn5vsSAAAAABBb3FsqcvWU2dpLTMG_MC4D29Ou'
+  RECAPTCHA_PRIVATE_KEY= '6Ldn5vsSAAAAAJfOVE_1GKTHehBRCDz9D0hpVO-w'
 end

@@ -14,18 +14,33 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li> 
         <% if user_signed_in? %>
           <li>
             <%= link_to new_pin_path do %>
-              <span class="glyphicon glyphicon-plus"></span> New Pin
+              <span class="glyphicon glyphicon-plus"></span>  New IMG
             <% end %>
           </li>
-          <li><%= link_to "Account", edit_user_registration_path %></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+              <span class="glyphicon glyphicon-user"></span>  Account
+            <% end %>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span>  Sign out
+            <% end %>
+          </li>
         <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <!-- <li><%= link_to "About", about_path %></li>  -->
+          <li>
+            <%= link_to new_user_session_path do %>
+              <span class="glyphicon glyphicon-log-in"></span>  Sign in
+            <% end %>
+          </li>
+          <li>
+            <%= link_to new_user_registration_path do %>
+              <span class="glyphicon glyphicon-ok"></span>  Sign up
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

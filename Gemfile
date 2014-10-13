@@ -46,6 +46,9 @@ gem 'will_paginate', '~> 3.0.5'
 # Added 101114 - Pagination gem
 gem 'will_paginate-bootstrap'
 
+# Added 101114 - reCAPTCHA gem
+gem "recaptcha", :require => "recaptcha/rails"
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'

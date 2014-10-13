@@ -1,6 +1,18 @@
-<h1>Edit pin</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @pin %> |
-<%= link_to 'Back', pins_path %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title">
+      <h1>Edit IMG</h1>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="panel-heading center">
+      <%= image_tag @pin.image.url(:large) %>
+    </div>
+  <%= render 'form' %>
+   </div>
+   <div class="panel-footer">
+	<%= link_to :back do %>
+		<span class="glyphicon glyphicon-chevron-left"></span>  Back
+	<% end %>
+  </div>
+</div>

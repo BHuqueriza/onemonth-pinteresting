@@ -91,4 +91,8 @@ Pinteresting::Application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  # Added 101214 - Required for reCAPTCHA
+  RECAPTCHA_PUBLIC_KEY= '6Ldn5vsSAAAAABBb3FsqcvWU2dpLTMG_MC4D29Ou'
+  RECAPTCHA_PRIVATE_KEY= '6Ldn5vsSAAAAAJfOVE_1GKTHehBRCDz9D0hpVO-w'
 end
